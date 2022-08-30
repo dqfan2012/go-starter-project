@@ -1,0 +1,9 @@
+version: '3'
+services:
+  starter-project:
+    build:
+      context: .
+      dockerfile: ./build/Dockerfile
+    env_file: .env
+    environment:
+      TEST_VARIABLE: "test"
