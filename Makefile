@@ -39,7 +39,7 @@ image-name:  ## Print the docker image name
 lint: lint-go ## Run all linters
 
 lint-go: build-test  ## Lint the go source code
-	docker run --rm $(TEST_IMAGE_NAME) sh -c 'golangci-lint run'
+	docker run --rm $(TEST_IMAGE_NAME) sh -c 'golangci-lint run --fix'
 
 run:
 	docker-compose up

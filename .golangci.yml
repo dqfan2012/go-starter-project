@@ -1,0 +1,39 @@
+run:
+  timeout: 5m
+  tests: false
+
+  skip-dirs:
+    - vendor$
+    - build
+
+  modules-download-mode: vendor
+  allow-parallel-runners: true
+
+output:
+  format: json
+
+linters:
+  enable-all: true
+  disable: # Disabling deprecated linters
+    - deadcode
+    - golint
+    - ifshort
+    - interfacer
+    - maligned
+    - nosnakecase
+    - scopelint
+    - structcheck
+    - varcheck
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
+
+  exclude-rules:
+    - path: wire\.go
+      linters:
+        - gochecknoglobals
+        - dupl
+    - path: main\.go
+      linters:
+        - gochecknoglobals
