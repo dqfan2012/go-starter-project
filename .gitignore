@@ -2,6 +2,7 @@
 .idea/
 .vscode/
 artifacts/
+.env
 
 # Binaries for programs and plugins
 *.exe
