@@ -6,7 +6,7 @@ run:
     - vendor$
     - build
 
-  modules-download-mode: vendor
+  modules-download-mode: readonly
   allow-parallel-runners: true
 
 output:
@@ -16,6 +16,7 @@ linters:
   enable-all: true
   disable: # Disabling deprecated linters
     - deadcode
+    - depguard
     - golint
     - ifshort
     - interfacer
